@@ -1,0 +1,9 @@
+# AI-Native 소프트웨어 개발 실습 의존성
+# 설치: uv pip install -r requirements.txt
+
+# 테스트 프레임워크
+pytest>=8.0.0
+pytest-cov>=5.0.0
+
+# 코드 품질
+ruff>=0.4.0

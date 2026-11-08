@@ -1,0 +1,19 @@
+---
+name: PRD Writer
+description: 제품 요구사항 문서를 작성하는 placeholder skill
+---
+
+# PRD Writer
+
+이 파일은 placeholder 내용입니다.
+
+## 목적
+- 프로젝트 요구사항을 구조화합니다.
+
+## 입력
+- 프로젝트 이름
+- 핵심 기능 요약
+- 대상 사용자
+
+## 출력
+- PRD 초안

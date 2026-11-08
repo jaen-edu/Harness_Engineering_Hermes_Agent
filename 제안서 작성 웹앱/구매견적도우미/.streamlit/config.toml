@@ -1,0 +1,10 @@
+[browser]
+gatherUsageStats = false
+
+[server]
+# 이 앱 전용 포트 (다른 Streamlit 앱과 겹치지 않게 고정)
+port = 8611
+maxUploadSize = 20
+
+[theme]
+base = "light"

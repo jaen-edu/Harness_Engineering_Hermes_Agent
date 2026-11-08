@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python scripts/pdf_to_images.py:*)",
+      "Bash(python scripts/validate_extraction.py:*)",
+      "Bash(python scripts/reconcile.py:*)",
+      "Bash(pip install -r requirements.txt)",
+      "Read(input/**)",
+      "Read(config/**)",
+      "Read(work/**)",
+      "Read(output/**)",
+      "Write(work/**)",
+      "Edit(work/**)"
+    ],
+    "deny": [
+      "Edit(input/**)",
+      "Write(input/**)",
+      "Bash(rm:*)",
+      "Bash(del:*)"
+    ]
+  }
+}

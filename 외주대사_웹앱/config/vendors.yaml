@@ -1,0 +1,50 @@
+# 업체 마스터
+# - code: ERP 업체코드
+# - name: ERP 업체명(표시용)
+# - aliases: 명세서에 찍히는 상호 표기 (괄호·(주)·공백은 무시하고 비교)
+# - file_keywords: 파일명에 이 단어가 있으면 이 업체로 자동 인식
+# - reading_notes: AI 판독 시 함께 전달할 양식 특징 (없으면 생략)
+# 업체를 추가할 때는 아래 형식대로 한 덩어리를 추가하면 됩니다.
+
+vendors:
+  - code: V001
+    name: (주)대성정밀
+    aliases: [대성정밀]
+    file_keywords: [대성정밀, 대성]
+    reading_notes: 월합계 표준형. 납품일자는 YYYY-MM-DD.
+
+  - code: V002
+    name: 한울도금(주)
+    aliases: [한울도금]
+    file_keywords: [한울도금, 한울]
+    reading_notes: 월합계 표준형. 납품일자는 MM/DD(연도 없음). 품번 열 이름이 "품목코드".
+
+  - code: V003
+    name: 세진열처리
+    aliases: [세진열처리]
+    file_keywords: [세진열처리, 세진]
+    reading_notes: 월합계 표준형. 납품일자는 YYYY.MM.DD.
+
+  - code: V004
+    name: (주)우림도장
+    aliases: [우림도장]
+    file_keywords: [우림도장, 우림]
+    reading_notes: 월합계 표준형. 숫자 위에 손글씨로 줄을 긋고 고친 정정이 있을 수 있음(예 62를 지우고 60). 정정 후 값을 쓰고 is_corrected를 true로.
+
+  - code: V005
+    name: 동아사출산업
+    aliases: [동아사출산업, 동아사출]
+    file_keywords: [동아사출, 동아]
+    reading_notes: 월합계 표준형. 납품일자는 MM/DD(연도 없음).
+
+  - code: V006
+    name: (주)성원금속
+    aliases: [성원금속]
+    file_keywords: [성원금속, 성원]
+    reading_notes: 가로형 거래명세표. 월과 일이 별도 열이므로 "M/D"로 합쳐 date에 기록. 발주번호 열 없음(빈 문자열). 품번 열 이름이 "도면번호". 번호(No) 열이 없으므로 row_no는 0. 행별 세액 없음(null).
+
+  - code: V007
+    name: 한성유압정공(주)
+    aliases: [한성유압정공, 한성유압]
+    file_keywords: [한성유압정공, 한성유압, 한성]
+    reading_notes: 납품 건별로 1장씩 발행(명세서 번호 HS-2609-xxx). 납품일자는 페이지 상단에 있으며 모든 행에 그 날짜를 쓴다. 수량 앞 △ 표시는 반품(차감) → is_return true, 수량·금액·세액은 음수. 하단의 공급가액은 그 페이지 합계.
